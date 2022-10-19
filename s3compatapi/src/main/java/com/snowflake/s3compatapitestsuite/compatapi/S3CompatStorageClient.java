@@ -11,6 +11,8 @@ import com.amazonaws.services.s3.S3ClientOptions;
 import com.amazonaws.services.s3.model.*;
 import com.snowflake.s3compatapitestsuite.perf.PerfMeasurement;
 import com.snowflake.s3compatapitestsuite.perf.PerfMeasurementRecorder;
+
+import org.apache.log4j.BasicConfigurator;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -46,6 +48,7 @@ public class S3CompatStorageClient implements StorageClient {
      * @param region The region the client targeting.
      * @param endpoint Endpoint the client would make requests to.
      */
+
     public S3CompatStorageClient(
             @Nullable AWSCredentialsProvider awsCredentialsProvider,
             @Nullable String region,
